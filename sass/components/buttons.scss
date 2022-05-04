@@ -1,0 +1,48 @@
+#level-buttons-container {
+  display: flex;
+  justify-content: space-between;
+  
+  .level-button {
+    background-color: hsl($purple-red, 70%, 40%);
+    border-color: hsl($purple-red, 70%, 40%);
+    border-radius: 5px;
+    color: hsl($purple-red, 100%, 99%);
+    cursor: pointer;
+    padding: $base*0.125 $base*0.5;
+  }
+}
+
+#move-buttons-container{
+  display: grid;
+  grid-template-areas:
+  '. up .'
+  'lf . rt' 
+  '. dn .';
+  grid-template-columns: repeat(3, 70px);
+  grid-template-rows: repeat(3, 70px);
+  margin: $base 0;
+  
+  .move-button {
+    border-radius: 50%;
+    background-color: hsl(0, 0%, 20%);
+    color: hsl(0, 0%, 99%);
+    cursor: pointer;
+    user-select: none;
+  }
+
+  #move-up {
+    grid-area: up;
+  }
+    
+  #move-down {
+    grid-area: dn;
+  }
+
+  #move-left {
+    grid-area: lf;
+  }
+
+  #move-right {
+    grid-area: rt;
+  }
+}

@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Press+Start+2P&display=swap');
+
+h1,
+h2,
+h3 {
+  font-family: $goldman;
+}
+
+h1 {
+  font-size: $base*2;
+}
+
+h2 {
+  font-size: $base*1.75;
+}
+
+h3 {
+  font-size: $base*1.375;
+}
+
+.level-button {
+  font-family: $goldman;
+  font-size: $base*1.5;
+}
+
+.move-button {
+  font-family: $goldman;
+  font-size: $base*2;
+}
+
+#game-screen {
+  div {
+    font-size: $base*1.125;
+  }
+}
+
+#game-respond {
+  font-family: $pixel;
+  font-size: $base*0.75;
+  line-height: 1.5;
+}
+
+#keys-info {
+  p {
+    font-family: $goldman;
+    font-size: $base;
+  }
+}

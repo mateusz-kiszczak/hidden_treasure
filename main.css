@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Press+Start+2P&display=swap");
+
+h1,
+h2,
+h3 {
+  font-family: "Goldman", cursive;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+.level-button {
+  font-family: "Goldman", cursive;
+  font-size: 24px;
+}
+
+.move-button {
+  font-family: "Goldman", cursive;
+  font-size: 32px;
+}
+
+#game-screen div {
+  font-size: 18px;
+}
+
+#game-respond {
+  font-family: "Press Start 2P", cursive;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+#keys-info p {
+  font-family: "Goldman", cursive;
+  font-size: 16px;
+}
+
+#level-buttons-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#level-buttons-container .level-button {
+  background-color: hsl(330deg, 70%, 40%);
+  border-color: hsl(330deg, 70%, 40%);
+  border-radius: 5px;
+  color: hsl(330deg, 100%, 99%);
+  cursor: pointer;
+  padding: 2px 8px;
+}
+
+#move-buttons-container {
+  display: grid;
+  grid-template-areas: ". up ." "lf . rt" ". dn .";
+  grid-template-columns: repeat(3, 70px);
+  grid-template-rows: repeat(3, 70px);
+  margin: 16px 0;
+}
+
+#move-buttons-container .move-button {
+  border-radius: 50%;
+  background-color: hsl(0deg, 0%, 20%);
+  color: hsl(0deg, 0%, 99%);
+  cursor: pointer;
+  user-select: none;
+}
+
+#move-buttons-container #move-up {
+  grid-area: up;
+}
+
+#move-buttons-container #move-down {
+  grid-area: dn;
+}
+
+#move-buttons-container #move-left {
+  grid-area: lf;
+}
+
+#move-buttons-container #move-right {
+  grid-area: rt;
+}
+
+#game-screen-container {
+  align-items: center;
+  background-color: hsl(95deg, 0%, 10%);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#game-screen-container #game-screen {
+  background-color: hsl(95deg, 70%, 70%);
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: repeat(8, 18px);
+  grid-template-rows: repeat(12, 18px);
+  justify-content: center;
+  margin: 16px 0;
+  padding: 16px;
+  user-select: none;
+  width: 70%;
+}
+
+#game-screen-container #game-screen > div {
+  justify-self: center;
+}
+
+#game-screen-container #game-respond {
+  background-color: hsl(95deg, 70%, 70%);
+  border-radius: 5px;
+  height: 70px;
+  margin-bottom: 16px;
+  padding: 16px;
+  width: 70%;
+}
+
+#keys-info {
+  display: none;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(0deg, 0%, 50%);
+}
+
+main {
+  background-color: hsl(0deg, 0%, 90%);
+  margin: 0 auto;
+  max-width: 400px;
+  min-width: 332px;
+  padding: 32px 16px;
+}
+
+main section {
+  margin: 16px 0;
+}
+
+@media only screen and (min-width: 800px) {
+  main {
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "header ." "screen control";
+    margin-top: 32px;
+    max-width: 800px;
+    min-width: auto;
+  }
+  main h1 {
+    grid-area: header;
+  }
+
+  main #screen-section {
+    grid-area: screen;
+  }
+
+  main #controller-section {
+    align-self: end;
+    grid-area: control;
+    justify-self: center;
+  }
+
+  main #controller-section #keys-info {
+    display: block;
+  }
+
+  main #controller-section #move-buttons-container {
+    margin-top: 32px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
